@@ -4,8 +4,113 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RealtyIncome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        body {
+	    font-family: 'Noto Sans KR', sans-serif;
+        }
+        header{
+            width: 100vw;
+            height: 100px;
+            position: fixed;
+            z-index: 50;
+        }
+        header>ul>li>a{
+            color: white;
+            text-decoration: none;
+        }
+        header>a{
+            line-height: 121.25px;
+        }
+        header img{
+            width: 280px;
+            line-height: 100px;
+        }
+        header ul{
+            display: inline-block;
+            float: right;
+            line-height: 100px;
+        }
+        header li{
+            display: inline-block;
+            list-style: none;
+            padding-right: 20px;   
+        }
+        .video-size{
+            /* min-width: 100%;
+            min-height: 100%;
+            right: 0;
+            bottom: 0;
+            overflow: hidden; */
+            width: 100%;
+            bottom: 0;
+        }
+        .main_tx{
+            padding-top: 20%;
+            text-align: center;
+        }
+        .sub.tx{
+            text-align: center;
+        }
+        .main_con{
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .main_con_tx{
+            color: white;
+        }
+        /* size */
+        .pd-left50{
+            padding-left: 50px;
+        }
+        .pd-rig50{
+            padding-right: 50px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <a href="#" class="pd-left50">
+            <img src="img/logo_white.png">
+        </a>
+        <ul class="pd-rig50">
+            <li>
+                <a href="">연혁</a>
+            </li>
+            <li>
+                <a href="">배당</a>
+            </li>
+            <li>
+                <a href="">주요고객사</a>
+            </li>
+            <li>
+                <a href="">산업별</a>
+            </li>
+            <li>
+                <a href="">공실률</a>
+            </li>
+            <li>
+                <a href="">찾아오시는길</a>
+            </li>
+        </ul>
+    </header>
+    <div class="video-box">
+        <video class="video-size" muted autoplay loop>
+            <source src="img/main.mp4" type="video/mp4">
+        </video>
+        <div class="main_con main_con_tx">
+            <h1 class="main_tx">
+                리얼티인컴은 기업들에 부동산을 임대하고, <br>매월 배당금을 지급하는 리츠(REITs)기업입니다.
+            </h1>
+            <p class="sub_tx">ㅎㅇㅎㅇ</p>
+        </div>
+    </div>
 </body>
 </html>
