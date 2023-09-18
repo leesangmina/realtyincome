@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Realty Income</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        body {
+	    font-family: 'Noto Sans KR', sans-serif;
+        }
+        header{
+            width: 100vw;
+            height: 100px;
+            position: fixed;
+            z-index: 50;
+        }
+        header>ul>li>a{
+            color: white;
+            text-decoration: none;
+        }
+        header>a{
+            line-height: 121.25px;
+        }
+        header img{
+            width: 280px;
+            line-height: 100px;
+        }
+        header ul{
+            display: inline-block;
+            float: right;
+            line-height: 100px;
+        }
+        header li{
+            display: inline-block;
+            list-style: none;
+            padding-right: 20px;   
+        }
+        .video-box {
+        position: relative;
+        height: auto; 
+}
+        .video-size{
+            /* min-width: 100%;
+            min-height: 100%;
+            right: 0;
+            bottom: 0;
+            overflow: hidden; */
+            width: 100%;
+            bottom: 100vh;
+            object-fit: cover;
+        }
+        .main_tx{
+            padding-top: 20%;
+            text-align: center;
+        }
+        .sub.tx{
+            text-align: center;
+        }
+        .main_con{
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .main_con_tx{
+            color: white;
+        }
+        section{
+            padding : 100px 50px;
+        }
+        section h1{
+            text-align: center;
+        }
+        .history{
+            background-color: pink;
+        }
+        .history ul{
+            position: relative;
+        }
+        .history ul::before{
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin:100px 0px 0px -2px;
+            padding: 100px 0;
+            width: 2px;
+            height: 100%;
+            background-color: black;
+        }
+        .history li{
+            position: relative;
+            list-style: none;
+        }
+        .history li::before{
+            content: " ";
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: 85.3%;
+            right: auto;
+        }
+        .bg_bl{
+            background-color: black;
+            color: white;
+        }
+        .history li 
+        /* size */
+        .pd_top100{
+            padding-top: 100px;
+        }
+        .mar_top100{
+            margin-top: 100px;
+        }
+        .pd_left50{
+            padding-left: 50px;
+        }
+        .pd_rig50{
+            padding-right: 50px;
+        }
+        .pd_lef30{
+            padding-left: 30px ;
+        }
+        .tx_cen{
+            text-align: center;
+        }
+        .bg_bl input{
+            margin-top: 100px;
+            background-color:black;
+            border-width: 0px 0px 2px 0px;
+            border-color: white;
+            font-size: 32px;
+            width: 90px;
+            color: white;
+        }
+        .inputcus{
+            text-align: center;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
+        /* font */
+        .font_bl{
+            font-weight: bold;
+        }
+        .font_32{
+            font-size: 32px;
+        }
+        .font_52{
+            font-size: 52px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="pd_left50">
+            <img src="img/logo_white.png">
+        </a>
+        <ul class="pd_rig50">
+            <li>
+                <a href="">연혁</a>
+            </li>
+            <li>
+                <a href="">배당</a>
+            </li>
+            <li>
+                <a href="">주요고객사</a>
+            </li>
+            <li>
+                <a href="">산업별</a>
+            </li>
+            <li>
+                <a href="">공실률</a>
+            </li>
+            <li>
+                <a href="">찾아오시는길</a>
+            </li>
+        </ul>
+    </header>
+    <div class="video-box">
+        <video class="video-size" muted autoplay loop>
+            <source src="img/main.mp4" type="video/mp4">
+        </video>
+        <div class="main_con main_con_tx">
+            <h1 class="main_tx">
+                리얼티인컴은 기업들에 부동산을 임대하고, <br>매월 배당금을 지급하는 리츠(REITs)기업입니다.
+            </h1>
+            <p class="sub_tx">ㅎㅇㅎㅇ</p>
+        </div>
+    </div>
+    <!-- <section>
+        <div class="history">
+            <h1>연혁</h1>
+            <ul>
+                <li>안녕</li>
+                <li>안녕</li>
+                <li>안녕</li>
+                <li>안녕</li>
+            </ul>
+        </div>
+    </section> -->
+    <section class="bg_bl">
+        <h1 class="tx_cen">리얼티인컴에 투자하고 매달 배당금을 받아보세요</h1>
+        <div class="inputcus">
+        <input class="stock" type="number" min="1" max="5" name="num" placeholder="100">주 투자시 매달 <a class="font_52 pd_lef30 dividendText">30,000</a>(세전) 원을 받을 수 있어요.
+        </div>
+        <p class="mar_top100 tx_cen">매월<a>oo을 할 수 있어요.</a></p>
+    </section>
+    <section>
+        <h1>주요고객사</h1>
+    </section>
+    <section>
+        <h1>보유부동산</h1>
+    </section>
+    <section>
+        <h1>찾아오시는길</h1>
+    </section>
+    <script>
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 1) {
+            $(".imhder").css({
+                "background": "black",
+                "transition": "background 0.5s ease"
+            });
+            $(".hdertx").css({
+                "color": "#fff",
+                "transition": "color 0.5s ease"
+            });
+            $('.logobl').attr("class", "logowh");
+        }
+        else {
+            $(".imhder").css({
+                "background": "#fff",
+                "transition": "background 0.5s ease"
+            });
+            $(".hdertx").css({
+                "color": "#000",
+                "transition": "color 0.5s ease"
+            });
+            $('.logowh').attr("class", "logobl");
+        }
+    });
+});
+	$(document).ready(function() {
+            $(".stock").on("input", function() {
+                var stock = parseInt($(".stock").val());
+                
+				if (isNaN(stock)){
+					$(".dividendText").text("0원");
+					$(".resultText").text("월배당금으로 무엇을 할 수 있을까요?");
+				}
+				else{
+                var dividend = 346;
+                
+                var result = stock * dividend;
+                var resultText = "";
+                
+                if (result >= 1 && result <= 500) {
+                    resultText = "매월 사탕을 먹을 수 있어요";
+                } else if (result >= 501 && result <= 1100) {
+                    resultText = "매월 아이스크림을 먹을 수 있어요";
+                }else if (result >= 1101 && result <= 3000) {
+                    resultText = "매월 음료수를 마실 수 있어요";
+                }else if (result >= 3001 && result <= 5000) {
+                    resultText = "매월 떡볶이 1인분을 먹을 수 있어요";
+                }else if (result >= 5001 && result <= 10000) {
+                    resultText = "매월 햄버거를 먹을 수 있어요";
+                }else if (result >= 10001 && result <= 30000) {
+                    resultText = "매월 한끼 든든하게 먹을 수 있어요";
+                }else if (result >= 30001 && result <= 50000) {
+                    resultText = "매월 휴대폰요금을 대신 낼 수 있어요";
+                }else if (result >= 50001 && result <= 100000) {
+                    resultText = "매월 비싼 한 끼 먹을 수 있어요";
+                }else if (result >= 100001 && result <= 200000) {
+                    resultText = "매월 근교로 여행을 떠날 수 있어요";
+                }else if (result >= 200001 && result <= 500000000) {
+                    resultText = "당신은 무엇을 할 건가요?";
+                }
+                
+                // 결과 및 배당금, 지출 텍스트 출력
+                $(".resultText").text(resultText);
+                $(".dividendText").text(result.toLocaleString()+"원");
+			}
+            });
+        });
+	
+    </script>
+</body>
+</html>
