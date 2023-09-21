@@ -76,7 +76,11 @@ map{
 }
 .history{
     background-color: pink;
+    text-align: center;
 }
+/* .history>ul>li{
+    text-align: left;
+} */
 .history ul{
     position: relative;
 }
@@ -139,7 +143,7 @@ map{
     border-width: 0px 0px 2px 0px;
     border-color: white;
     font-size: 32px;
-    width: 90px;
+    width: 20px;
     color: white;
     text-align: right;
     margin-right: 10px;

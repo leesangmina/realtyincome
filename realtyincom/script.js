@@ -1,6 +1,8 @@
+// header scroll
 $(document).ready(function(){
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
+        // 스크롤 O
         if (scroll > 1) {
             $(".imhder").css({
                 "background": "black",
@@ -12,9 +14,10 @@ $(document).ready(function(){
             });
             $('.logobl').attr("class", "logowh");
         }
+        // 스크롤 X : 스크롤 상단에 붙기
         else {
             $(".imhder").css({
-                "background": "#fff",
+                "background": "none",
                 "transition": "background 0.5s ease"
             });
             $(".hdertx").css({
@@ -25,13 +28,13 @@ $(document).ready(function(){
         }
     });
 });
+
 $(document).ready(function() {
         $("#stock").on("input", function() {
             var stock = parseInt($("#stock").val());
             
             if (isNaN(stock)){
                 $(".dividendText").text("0");
-                $(".resultText").text("월배당금으로 무엇을 할 수 있을까요?");
             }
             else{
             var dividend = 346;
@@ -100,3 +103,75 @@ $(document).ready(function() {
             "background":"conic-gradient(#8b22ff 0% 25%, #ffc33b 25% 70%, #21f3d6 70% "+i+"%, #ffffff "+i+"% 100%)"
             });
     }
+
+    const inputElement = document.getElementById('stock');
+
+    // input 요소의 값이 변경될 때마다 실행되는 함수
+    inputElement.addEventListener('input', function () {
+        const inputValue = this.value;
+        // 입력 값의 길이에 따라 동적으로 너비를 조절 (오른쪽 정렬을 유지)
+        const newWidth = inputValue.length * 15 + 15; // 예시 값, 필요에 따라 조절
+        this.style.width = newWidth + 'px';
+    });
+
+    // 입력 필드의 값이 지워질 때 너비를 최소 너비로 설정
+    inputElement.addEventListener('keydown', function (e) {
+        if (e.key === 'Backspace' && this.value.length === 1) {
+            this.style.width = '10px'; // 최소 너비
+        }
+    });
+
+
+// 카운트를 표시할 요소
+const $counterMon = document.querySelector(".countMon");
+
+// 목표수치
+const maxMon = 637;
+counter($counterMon, maxMon);
+
+
+    function counter($counterMon, maxMon) {
+        let now = maxMon;
+      
+        const handle = setInterval(() => {
+          $counterMon.innerHTML = Math.ceil(maxMon - now);
+        
+          // 목표에 도달하면 정지
+          if (now < 1) {
+            clearInterval(handle);
+          }
+        
+          // 적용될 수치, 점점 줄어듬
+          const step = now / 10;
+      
+          now -= step;
+        }, 50);
+    }
+
+
+ 
+    const $counterQua = document.querySelector(".countQua");
+
+    // 목표수치
+    const maxQua = 102;
+    counter($counterQua, maxQua);
+    
+    
+        function counter($counterQua, maxQua) {
+            let now = maxQua;
+          
+            const handle = setInterval(() => {
+              $counterQua.innerHTML = Math.ceil(maxQua - now);
+            
+              // 목표에 도달하면 정지
+              if (now < 1) {
+                clearInterval(handle);
+              }
+            
+              // 적용될 수치, 점점 줄어듬
+              const step = now / 10;
+          
+              now -= step;
+            }, 50);
+        }
+           
