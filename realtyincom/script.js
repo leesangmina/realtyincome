@@ -122,56 +122,57 @@ $(document).ready(function() {
     });
 
 
-// 카운트를 표시할 요소
-const $counterMon = document.querySelector(".countMon");
+// // 카운트를 표시할 요소
+// const $counterMon = document.querySelector(".countMon");
 
-// 목표수치
-const maxMon = 637;
-counter($counterMon, maxMon);
+// // 목표수치
+// const maxMon = 637;
+// counter($counterMon, maxMon);
 
 
-    function counter($counterMon, maxMon) {
-        let now = maxMon;
+//     function counter($counterMon, maxMon) {
+//         let now = maxMon;
       
-        const handle = setInterval(() => {
-          $counterMon.innerHTML = Math.ceil(maxMon - now);
+//         const handle = setInterval(() => {
+//           $counterMon.innerHTML = Math.ceil(maxMon - now);
         
-          // 목표에 도달하면 정지
-          if (now < 1) {
-            clearInterval(handle);
-          }
+//           // 목표에 도달하면 정지
+//           if (now < 1) {
+//             clearInterval(handle);
+//           }
         
-          // 적용될 수치, 점점 줄어듬
-          const step = now / 10;
+//           // 적용될 수치, 점점 줄어듬
+//           const step = now / 10;
       
-          now -= step;
-        }, 50);
-    }
+//           now -= step;
+//         }, 50);
+//     }
 
 
  
-    const $counterQua = document.querySelector(".countQua");
+//     const $counterQua = document.querySelector(".countQua");
 
-    // 목표수치
-    const maxQua = 102;
-    counter($counterQua, maxQua);
+//     // 목표수치
+//     const maxQua = 102;
+//     counter($counterQua, maxQua);
     
     
-        function counter($counterQua, maxQua) {
-            let now = maxQua;
+//         function counter($counterQua, maxQua) {
+//             let now = maxQua;
           
-            const handle = setInterval(() => {
-              $counterQua.innerHTML = Math.ceil(maxQua - now);
+//             const handle = setInterval(() => {
+//               $counterQua.innerHTML = Math.ceil(maxQua - now);
             
-              // 목표에 도달하면 정지
-              if (now < 1) {
-                clearInterval(handle);
-              }
+//               // 목표에 도달하면 정지
+//               if (now < 1) {
+//                 clearInterval(handle);
+//               }
             
-              // 적용될 수치, 점점 줄어듬
-              const step = now / 10;
+//               // 적용될 수치, 점점 줄어듬
+//               const step = now / 10;
           
-              now -= step;
-            }, 50);
-        }
+//               now -= step;
+//             }, 50);
+//         }
            
+

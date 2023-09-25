@@ -46,10 +46,27 @@ overflow: hidden;
     bottom: 100vh;
     object-fit: cover;
 }
+.scroll{
+    width: 8rem;
+    padding-top: 4%;
+}
 .main_tx{
     padding-top: 13%;
     text-align: center;
     font-size: 38px;
+}
+.main_flex_wid,
+.main_flex_wid_cus {
+  display: flex;
+  justify-content: space-between; /* 요소들을 좌우로 분배 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.main_flex_wid > div,
+.main_flex_wid_cus > div {
+  flex: 0 0 48%; /* 너비고정 flex-grow: 0, flex-shrink: 0, flex-basis: 고정 너비 값 설정 */
+  padding: 10px; /*간격*/
+  text-align: center;
 }
 .sub_tx{
     text-align: center;
@@ -59,7 +76,6 @@ overflow: hidden;
     top:0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
 .main_con_tx{
@@ -75,12 +91,28 @@ map{
    padding : 100px 0px !important
 }
 .history{
-    background-color: pink;
-    text-align: center;
+    /* background-color: pink; */
 }
 /* .history>ul>li{
     text-align: left;
 } */
+.history b{
+    display: inline-block;
+}
+.history img{
+    width: 100%;
+    padding-bottom: 5px;
+}
+.history p{
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+.history h3{
+    font-size: 32px;
+    padding-bottom: 10px;
+}
 .history ul{
     position: relative;
 }
@@ -111,8 +143,14 @@ map{
     background-color: black;
     color: white;
 }
+.boxy{
+    width: 8%;
+}
 .history li 
 /******* size *******/
+.pd_top7p{
+    padding-top: 100px;
+}
 .pd_top100{
     padding-top: 100px;
 }
@@ -130,6 +168,9 @@ map{
 }
 .pd_bot100{
     padding-bottom: 100px;
+}
+.mar_top12p{
+    margin-top: 12%;
 }
 .mar_top30p{
     margin-top: 30%;
@@ -175,6 +216,9 @@ input:focus{
 .font_bl{
     font-weight: bold;
 }
+h2{
+    font-size: 16px;
+}
 .font_32{
     font-size: 32px;
 }
@@ -191,6 +235,14 @@ input:focus{
 }
 .d_flex{
     display: flex;
+}
+.main_flex_wid{
+    width: 45%;
+    padding-top: 5%;
+}
+.main_flex_wid_cus{
+    width: 45%;
+    padding-top: 4rem;
 }
 .b2b img{
     width: 150px;
@@ -226,4 +278,17 @@ iframe{
     width: 200px;
     height: 100px;
     display: inline-block;
+}
+.his_2023{
+    /* background-color: aqua; */
+    width: 19rem;
+}
+.pd_rig20p{
+    padding-right: 25%;
+}
+.pd_lef20p{
+    padding-left: 25%;
+}
+.pd_top50{
+    padding-top: 50px;
 }
