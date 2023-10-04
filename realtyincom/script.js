@@ -148,8 +148,45 @@ $(document).ready(function() {
 //         }, 50);
 //     }
 
+const stockInput = document.getElementById("stock");
+const dividendText = document.querySelector(".dividendText");
 
- 
+stockInput.addEventListener("input", updateDividend);
+
+function updateDividend() {
+  const investedStocks = parseInt(stockInput.value) || 0; // 입력된 주식 수를 정수로 변환합니다.
+  const dividend = investedStocks * 346; // 주식 수를 기반으로 배당금을 계산합니다. (예: 각 주당 100원)
+
+  animateDividendCount(dividend);
+}
+
+function animateDividendCount(target) {
+  const current = parseInt(dividendText.textContent.replace(/,/g, "")) || 0; // 현재 표시된 배당금을 가져옵니다.
+  const duration = 1000; // 애니메이션 지속 시간 (1초)
+  let startTime = null;
+
+  function animate(time) {
+    if (!startTime) startTime = time;
+    const progress = (time - startTime) / duration;
+
+    if (progress < 1) {
+      const easedProgress = easeOutQuart(progress);
+      const currentValue = Math.round(current + (target - current) * easedProgress);
+      dividendText.textContent = currentValue.toLocaleString(); // 쉼표로 구분된 형태로 배당금을 업데이트합니다.
+      requestAnimationFrame(animate);
+    } else {
+      dividendText.textContent = target.toLocaleString(); // 최종 값으로 설정
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+// Easing 함수 - 이징 함수를 사용하여 부드러운 애니메이션을 만듭니다.
+function easeOutQuart(t) {
+  return 1 - (1 - t) ** 4;
+}
+
 //     const $counterQua = document.querySelector(".countQua");
 
 //     // 목표수치

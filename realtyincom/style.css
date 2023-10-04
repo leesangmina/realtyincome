@@ -108,10 +108,23 @@ map{
     transition: height 0.5s ease;
 }
 .history-toggle{
-    background-color: red;
+    height: 50px;
+    text-align: center;
+
 }
-.toggle-button{
-    background-color: blue;
+#toggle-button{
+    border: 2px solid black;
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: white;
+    -webkit-transition-duration: 0.5s;
+    cursor: pointer;
+}
+#toggle-button:hover{
+    background-color: black;
+    color: white;
+    -webkit-transition-duration: 0.5s;
 }
 .expanded {
     height: auto;
@@ -176,7 +189,10 @@ map{
 .boxy{
     width: 8%;
 }
-.history li 
+.wrapdev{
+    width: 500px;
+}
+
 /******* size *******/
 .pd_top7p{
     padding-top: 100px;
