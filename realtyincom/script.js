@@ -174,6 +174,26 @@ $(document).ready(function() {
 //               now -= step;
 //             }, 50);
 //         }
-           
 
-$('.pade_down').focus();
+document.addEventListener("DOMContentLoaded", function() {
+    var toggleButton = document.getElementById("toggle-button");
+    var historyContent = document.querySelector(".history");
+    var initialHeight = historyContent.clientHeight; // 초기 높이를 저장
+    var isExpanded = false;
+    var scrollYPosition = 0; // 스크롤 위치 저장 변수
+
+    toggleButton.addEventListener("click", function() {
+        if (isExpanded) {
+            historyContent.style.height = initialHeight + "px"; // 초기 높이로 복원
+            toggleButton.textContent = "더보기";
+            // 더보기를 누른 후 스크롤 위치를 저장된 위치로 복구
+            window.scrollTo(0, scrollYPosition);
+        } else {
+            scrollYPosition = window.scrollY; // 현재 스크롤 위치 저장
+            var scrollHeight = historyContent.scrollHeight;
+            historyContent.style.height = scrollHeight + "px"; // 전체 내용의 높이로 확장
+            toggleButton.textContent = "접기";
+        }
+        isExpanded = !isExpanded;
+    });
+});

@@ -87,6 +87,9 @@ section{
 sectionout{
     padding : 100px 0px;
 }
+sectionfooter{
+    padding: 50px 50px;
+}
 sectionout h1{
     padding: 0px 50px;
     text-align: center;
@@ -100,8 +103,18 @@ map{
 }
 .history{
     position: relative;
-    height: 700px;
+    height: 800px;
     overflow: hidden;
+    transition: height 0.5s ease;
+}
+.history-toggle{
+    background-color: red;
+}
+.toggle-button{
+    background-color: blue;
+}
+.expanded {
+    height: auto;
 }
 .history ::after{
     content: "";
@@ -192,6 +205,9 @@ map{
 .mar_top30p{
     margin-top: 30%;
 }
+.mar_rig20{
+    margin-right: 20rem;
+}
 .tx_cen{
     text-align: center;
 }
@@ -233,6 +249,52 @@ input:focus{
     font-size: 64px;
     font-weight: bold;
     margin-top: 60%;
+}
+
+
+/** footer **/
+footer{
+    padding: 50px 50px;
+    align-items: center;
+}
+footer img{
+    width: 250px;
+}
+footer ul{
+    padding-left: 0px;
+    display: block;
+}
+footer a{
+    text-decoration: none;
+}
+footer li{
+    margin: 0px 10px;
+    
+    color: white;
+    list-style: none;
+}
+.footer_2{
+    text-align: right;
+}
+.footer_2 p{
+    margin: 0px;   
+    display: inline-block;
+}
+footer hr{
+    display: inline-block;
+    border-left: 1px solid white; 
+    width: 0px;
+    height: 12px; 
+    margin: 0px 10px; 
+    padding: 0; 
+}
+
+/** display **/
+.dis_inbl{
+    display: inline-block;
+}
+.dis_fx{
+    display: flex;
 }
 /******* font *******/
 .font_bl{
