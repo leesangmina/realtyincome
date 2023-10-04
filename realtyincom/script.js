@@ -176,3 +176,4 @@ $(document).ready(function() {
 //         }
            
 
+$('.pade_down').focus();
